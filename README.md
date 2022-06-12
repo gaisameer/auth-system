@@ -1,5 +1,5 @@
 # Auth-System
-##### sample project to observe working of golang and mongodb in a contanarized environment
+##### sample project to observe working of golang and mongodb in a containerized environment
 ##
 
 
