@@ -1,4 +1,8 @@
-FROM golang:1.18.3-alpine3.16
+FROM golang:1.18.3-bullseye
+RUN mkdir -p /app
+WORKDIR /app
 COPY . .
+# RUN mkdir -p /builded
 EXPOSE 8080
-CMD ["go", "run", "main.go"]
+RUN CGO_ENABLED=0 GOOS=linux go build main.go
+ENTRYPOINT ["./main"]
